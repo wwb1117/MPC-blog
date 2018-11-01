@@ -20,7 +20,7 @@ MpcBlog是一个妈妈去哪儿产品部内部使用的轻量级博客应用
 
 ### 技术支持
 
-感谢[wmui](https://travis-ci.org/wmui/vueblog)技术支持。
+感谢[wmui](https://github.com/wmui/vueblog)技术支持。
 
 ### 全局配置
 
