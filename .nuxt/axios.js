@@ -113,8 +113,8 @@ export default (ctx, inject) => {
   const axiosOptions = {
     // baseURL
     baseURL : process.browser
-      ? 'http://localhost:3000/'
-      : (process.env._AXIOS_BASE_URL_ || 'http://localhost:3000/'),
+      ? 'http://localhost:3033/'
+      : (process.env._AXIOS_BASE_URL_ || 'http://localhost:3033/'),
 
     // Create fresh objects for all default header scopes
     // Axios creates only one which is shared across SSR requests!
@@ -132,12 +132,12 @@ export default (ctx, inject) => {
     }
   }
 
-  
+
   // Proxy SSR request headers headers
   axiosOptions.headers.common = (ctx.req && ctx.req.headers) ? Object.assign({}, ctx.req.headers) : {}
   delete axiosOptions.headers.common['accept']
   delete axiosOptions.headers.common['host']
-  
+
 
   // Create new axios instance
   const axios = Axios.create(axiosOptions)
@@ -146,10 +146,10 @@ export default (ctx, inject) => {
   extendAxiosInstance(axios)
 
   // Setup interceptors
-  
-  
-  setupProgress(axios, ctx) 
-  
+
+
+  setupProgress(axios, ctx)
+
 
   // Inject axios to the context as $axios
   ctx.$axios = axios
