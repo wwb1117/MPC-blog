@@ -35,13 +35,13 @@
       <nuxt/>
     </section>
     <aside class="blog-aside">
-      <nuxt-link to="/rss.xml" target="_blank"><i class="vueblog icon-rss"></i></nuxt-link>
-      <a href="https://github.com/wmui"><i class="vueblog icon-github"></i></a>
+      <!-- <nuxt-link to="/rss.xml" target="_blank"><i class="vueblog icon-rss"></i></nuxt-link> -->
+      <a href="https://github.com/wwb1117/MPC-blog"><i class="vueblog icon-github"></i></a>
       <a href="/admin/publish"><i class="vueblog icon-writefill"></i></a>
       <a @click="backTop"><i class="vueblog icon-backtop"></i></a>
     </aside>
     <footer class="blog-footer container">
-      <p>Powered by <a href="https://github.com/wmui/vueblog" target="_blank">VueBlog</a></p>
+      <p>Powered by <a href="">妈妈去哪儿</a></p>
     </footer>
   </div>
 </template>
