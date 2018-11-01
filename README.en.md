@@ -30,7 +30,7 @@ First install [MongoDB](https://www.mongodb.com/download-center?jmp=nav#communit
 # install dependencies
 npm install # or yarn
 
-# serve in dev mode, with hot reload at http://127.0.0.1:3000
+# serve in dev mode, with hot reload at http://127.0.0.1:3033
 npm run dev
 
 # build for production
@@ -40,7 +40,7 @@ npm run build
 npm start
 ```
 
-**Tips：** Useing `http://127.0.0.1:3000` replace `http://localhost:3000` visit your local project
+**Tips：** Useing `http://127.0.0.1:3033` replace `http://localhost:3033` visit your local project
 
 ### Global config
 
@@ -81,7 +81,7 @@ export default {
   app: {
     domain: '',
     host: '127.0.0.1',
-    port: 3000,
+    port: 3033,
     routerBaseApi: 'api'
   }
 }
