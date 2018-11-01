@@ -136,6 +136,7 @@ export default {
 
   // 管理员登录
   async LOGIN({ commit, state, getters }, user) {
+    console.log(getters.baseUrl)
     const { data } = await axios.post(`${getters.baseUrl}/login`, user)
     if (data.data) {
       commit('SET_TOKEN', data.data.token)

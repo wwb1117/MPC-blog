@@ -12,6 +12,7 @@ import { setContext, getLocation, getRouteData } from './utils'
 import { createStore } from './store.js'
 
 /* Plugins */
+import nuxt_plugin_swplugin_0a03016f from 'nuxt_plugin_swplugin_0a03016f' // Source: ./sw.plugin.js (ssr: false)
 import nuxt_plugin_axios_9366d254 from 'nuxt_plugin_axios_9366d254' // Source: ./axios.js
 import nuxt_plugin_components_50cb0b6b from 'nuxt_plugin_components_50cb0b6b' // Source: ..\\plugins\\components.js
 import nuxt_plugin_filters_2dd71012 from 'nuxt_plugin_filters_2dd71012' // Source: ..\\plugins\\filters.js
@@ -157,6 +158,9 @@ async function createApp (ssrContext) {
   if (typeof nuxt_plugin_components_50cb0b6b === 'function') await nuxt_plugin_components_50cb0b6b(app.context, inject)
   if (typeof nuxt_plugin_filters_2dd71012 === 'function') await nuxt_plugin_filters_2dd71012(app.context, inject)
   
+  if (process.browser) { 
+    if (typeof nuxt_plugin_swplugin_0a03016f === 'function') await nuxt_plugin_swplugin_0a03016f(app.context, inject)
+  }
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {

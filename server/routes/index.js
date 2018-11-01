@@ -15,38 +15,38 @@ router
   .get('/rss.xml', tool.rss)
   .get('/sitemap.xml', tool.sitemap)
   .get('/robots.txt', tool.robots)
-  .post('/api/send-email', tool.sendEmail)
+  .post('/blogapi/send-email', tool.sendEmail)
 
 router
-  .get(/\/api\/oauth\/github\/callback/, user.githubCallback)
-  .get('/api/oauth/github/:state?', user.githubLogin)
+  .get(/\/blogapi\/oauth\/github\/callback/, user.githubCallback)
+  .get('/blogapi/oauth/github/:state?', user.githubLogin)
 
 router
-  .get('/api/user/:username?', user.getUserInfo)
-  .patch('/api/user', checkToken, user.patchUserInfo)
-  .post('/api/login', user.login)
-  .post('/api/logout', checkToken, user.logout)
+  .get('/blogapi/user/:username?', user.getUserInfo)
+  .patch('/blogapi/user', checkToken, user.patchUserInfo)
+  .post('/blogapi/login', user.login)
+  .post('/blogapi/logout', checkToken, user.logout)
 
 router
-  .get('/api/tags/:id?', tag.getTagsOrArticles)
-  .post('/api/tag', checkToken, tag.postTag)
-  .patch('/api/tag', checkToken, tag.patchTag)
-  .del('/api/tag/:id?', checkToken, tag.deleteTag)
+  .get('/blogapi/tags/:id?', tag.getTagsOrArticles)
+  .post('/blogapi/tag', checkToken, tag.postTag)
+  .patch('/blogapi/tag', checkToken, tag.patchTag)
+  .del('/blogapi/tag/:id?', checkToken, tag.deleteTag)
 
 router
-  .get('/api/search/:keyword?', article.search)
-  .get('/api/article/:id?', article.getArticle)
-  .get('/api/articles/:page?/:limit?', article.getArticles)
-  .get('/api/private-articles', checkToken, article.getPrivateArticles)
-  .get('/api/archives', article.archives)
-  .post('/api/article', checkToken, article.postArticle)
-  .post('/api/upload', checkToken, article.upload)
-  .patch('/api/article', checkToken, article.patchArticle)
-  .del('/api/article/:id?', checkToken, article.deleteArticle)
+  .get('/blogapi/search/:keyword?', article.search)
+  .get('/blogapi/article/:id?', article.getArticle)
+  .get('/blogapi/articles/:page?/:limit?', article.getArticles)
+  .get('/blogapi/private-articles', checkToken, article.getPrivateArticles)
+  .get('/blogapi/archives', article.archives)
+  .post('/blogapi/article', checkToken, article.postArticle)
+  .post('/blogapi/upload', checkToken, article.upload)
+  .patch('/blogapi/article', checkToken, article.patchArticle)
+  .del('/blogapi/article/:id?', checkToken, article.deleteArticle)
 
 router
-  .post('/api/comment', comment.postComment)
-  .get('/api/comments', comment.getComments)
-  .del('/api/comment/:id?', checkToken, comment.deleteComment) // 管理员可以删除评论
+  .post('/blogapi/comment', comment.postComment)
+  .get('/blogapi/comments', comment.getComments)
+  .del('/blogapi/comment/:id?', checkToken, comment.deleteComment) // 管理员可以删除评论
 
 export default router

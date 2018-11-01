@@ -32,6 +32,6 @@ export default {
     domain: '',
     host: '127.0.0.1',
     port: 3033,
-    routerBaseApi: 'api'
+    routerBaseApi: 'blogapi'
   }
 }
