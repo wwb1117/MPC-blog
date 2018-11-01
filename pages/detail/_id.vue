@@ -14,9 +14,9 @@
     <p class="detail-tags">
       <nuxt-link v-for="(tag, index) in article.tags" :key="index" :to="'/tags/' + tag.id">{{ tag.name }}</nuxt-link>
     </p>
-    <div class="detail-copyright">
+    <!-- <div class="detail-copyright">
       <p>文章采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">知识共享署名 4.0 国际许可协议</a> 进行许可，转载时请注明原文链接。</p>
-    </div>
+    </div> -->
     <div class="detail-admin" v-if="isLogin">
       <p class="admin-del"><a @click="del(article.id)">删除</a></p>
       <p class="admin-edit"><a @click="edit(article.id)">编辑</a></p>
