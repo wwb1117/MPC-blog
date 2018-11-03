@@ -2,21 +2,23 @@ import axios from 'axios'
 
 export default {
   async nuxtServerInit({ dispatch, commit, getters }, { req, res }) {
-    if (req.headers.cookie) {
-      // 解析cookie
-      let cookie = req.headers.cookie, cookieObj = {}, cookieArr = [], key = '', value = '';
-      cookie = cookie.split(';')
-      for (let i = 0; i < cookie.length; i++) {
-        cookieArr = cookie[i].trim().split('=')
-        key = cookieArr[0]
-        value = cookieArr[1]
-        cookieObj[key] = value
-      }
-      if(cookieObj.token) {
-        commit('SET_TOKEN', cookieObj.token)
-      }
-      if(cookieObj.githubToken){
-        commit('SET_GITHUB_TOKEN', cookieObj.githubToken)
+    if (req) {
+      if (req.headers.cookie) {
+        // 解析cookie
+        let cookie = req.headers.cookie, cookieObj = {}, cookieArr = [], key = '', value = '';
+        cookie = cookie.split(';')
+        for (let i = 0; i < cookie.length; i++) {
+          cookieArr = cookie[i].trim().split('=')
+          key = cookieArr[0]
+          value = cookieArr[1]
+          cookieObj[key] = value
+        }
+        if(cookieObj.token) {
+          commit('SET_TOKEN', cookieObj.token)
+        }
+        if(cookieObj.githubToken){
+          commit('SET_GITHUB_TOKEN', cookieObj.githubToken)
+        }
       }
     }
 
