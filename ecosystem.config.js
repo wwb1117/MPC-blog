@@ -14,9 +14,12 @@ module.exports = {
   deploy: {
     production: {
       user: 'root',
-      host: '', // 服务器IP
+      // 服务器ip
+      host: '47.92.4.135',
+      // 分支
       ref: 'origin/master',
-      repo: 'git@github.com:wmui/vueblog.git',
+      // 仓库地址
+      repo: 'git@github.com:wwb1117/MPC-blog.git',
       path: '/www/vueblog',
       'post-deploy': 'yarn && npm run build && pm2 reload ecosystem.config.js --env production'
     }
