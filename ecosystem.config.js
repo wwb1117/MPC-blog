@@ -20,7 +20,7 @@ module.exports = {
       ref: 'origin/master',
       // 仓库地址
       repo: 'git@github.com:wwb1117/MPC-blog.git',
-      path: '/www/vueblog',
+      path: '/www/MPC-blog',
       'post-deploy': 'yarn && npm run build && pm2 reload ecosystem.config.js --env production'
     }
   }
