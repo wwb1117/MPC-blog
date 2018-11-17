@@ -2,7 +2,7 @@
 <!-- <a href="https://travis-ci.org/wmui/vueblog"><img src="https://travis-ci.org/wmui/vueblog.svg?branch=master" alt="Build Status"></a>
 <a href="https://github.com/wmui/vueblog"><img src="https://img.shields.io/badge/license-AGPL-blue.svg" alt="License"></a> -->
 
-## MpcBlog
+## MpcBlog test
 
 MpcBlog是一个妈妈去哪儿产品部内部使用的轻量级博客应用
 
