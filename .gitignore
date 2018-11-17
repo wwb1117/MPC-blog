@@ -4,7 +4,7 @@ node_modules
 # logs
 npm-debug.log
 
-#Nuxt build
+# Nuxt build
 .nuxt
 
 # Nuxt generate
@@ -19,4 +19,3 @@ public/*
 NOTE.md
 
 build
-
