@@ -18,6 +18,7 @@
                 <nuxt-link :to="nav.path">{{ nav.name }}</nuxt-link>
               </li>
               <li><a @click="logout">退出</a></li>
+
             </ul>
             <!-- front navs -->
             <ul class="nav-list" v-else>
